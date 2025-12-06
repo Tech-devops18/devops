@@ -30,7 +30,7 @@ pipeline {
             steps {
                 script {
                     sh """
-                    scp -i ${SSH_KEY} -o StrictHostKeyChecking=no -r ./* ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_PATH}/
+                    scp -i ${SSH_KEY} -o StrictHostKeyChecking=no -r ./index.html ${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_PATH}/
                     """
                 }
             }
